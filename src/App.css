@@ -1,0 +1,211 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Markazi+Text&display=swap');
+
+* {
+  margin : 0;
+  font-family: 'Markazi Text', 'Roboto', 'Lato';
+}
+
+html {
+  width: 100vw;
+  height: fit-content;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, a {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Admin css */
+
+.flex-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-bar {
+  width: 80%;
+  margin: 40px 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: solid black 0.5px;
+}
+
+textarea {
+  width: 70%;
+  height: 100px;
+}
+
+.delete-button {
+  margin: 15px;
+}
+
+/* quelques éléments des pages d'admin sont stylisés dans la partie ci dessous, notamment la partie "table"  */
+
+/* Main page */
+
+
+
+.app-div {
+  overflow-x: hidden;
+}
+
+.home-div {
+  height: 100vh;
+  width: 90%;
+  background-color: beige;
+  padding: 0 5% 5% 5%;
+}
+
+.home-div * {
+  color: brown;
+}
+
+.home-content {
+  height: fill;
+}
+
+.presentation-par {
+  width: fill;
+  padding: 5%;
+  color: beige;
+  background-color: brown;
+  border-radius: 15px;
+}
+
+.enter-btn-1 {
+  border-radius: 15px;
+  background-color: brown;
+  color:beige;
+  padding: 10px 20px;
+}
+
+/* form-div */
+
+.form-div {
+  height: 100vh;
+  width: 100%;
+  background-color: brown;
+}
+
+.form-div * {
+  color: beige;
+}
+
+.form-div > form {
+  height: 90%;
+  padding: 5% 0;
+}
+
+.form-component {
+  display: flex;
+  flex-direction: row;
+  width: 94%;
+  margin: 3%;
+  background-color: beige;
+  height: 35%;
+  border-radius: 15px; 
+}
+
+.form-component * {
+  color: brown;
+  
+}
+
+.form-component > div {
+  width: 50%;
+  margin: 2.5%;
+}
+
+.input-div {
+  width: 85%;
+  height: 30%;
+  padding: 0 7.5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-div > p {
+  text-align: right;
+  margin-left: 6%;
+}
+
+.enter-btn-2 {
+  border-radius: 15px;
+  background-color: beige;
+  color:brown;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+.form-signin {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+/* list-div */
+
+#list-div {
+  min-height: 50vh;
+  /* height: 100vh; */
+  background-color: beige;
+  padding: 10% 0;
+}
+
+#list-div * {
+  color: brown
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 5%;
+}
+
+table > * {
+  text-align: center;
+}
+
+th, td {
+  border: 0.5px solid brown;
+  max-width: 17%;
+}
+
+table a {
+  text-decoration: underline;
+}
+
+.contact-div {
+  margin-top: 15%;
+  width: 100%;
+}
+
+.logo {
+  height: 100px;
+}

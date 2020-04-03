@@ -6,7 +6,7 @@ class APIHandler {
     if (!process.env.REACT_APP_BACKEND_URL)
       throw new Error("A target backend URL must be specified in .env");
     this.api = axios.create({
-      baseURL: process.env.REACT_APP_BACKEND_URL,
+      baseURL: `${process.env.REACT_APP_BACKEND_URL}`,
       // withCredentials: infos && infos.credentials ? true : false
       withCredentials: true
     });

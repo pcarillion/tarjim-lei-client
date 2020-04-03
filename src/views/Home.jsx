@@ -143,7 +143,7 @@ const Home = () => {
 تطبيق انترنت بسيط يقدم خدمة الترجمة عبر الهاتف بين اللغتين العربية والفرنسية للأشخاص الذين يحتاجون إلي هذه الخدمة والمتواجدين داخل فرنسا، خاصة فيما يخص المعاملات الطبية والصحية والتي تتصل بتفشي وباء فيروس كورونا 
                     </p>}
                     {language.enter? <a href="/app" className="enter-btn-1">{language.enter}</a>: <a href='#app' className="enter-btn-1">أدخل</a>}
-                    <Link to="/admin">app</Link>
+                    <Link to="/signup">app</Link>
                 </div>
             </div>
 

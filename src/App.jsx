@@ -9,6 +9,7 @@ import Home from './views/Home'
 import Application from './views/Application'
 
 import SignIn from './views/admin/SignIn'
+import SignUp from './views/admin/SignUp'
 import AdminHome from './views/admin/AdminHome'
 import AdminListContacts from './views/admin/AdminListContacts'
 import AdminCreateContact from './views/admin/AdminCreateContact'
@@ -28,6 +29,7 @@ function App() {
         <Route path="/app" component={Application}/>
 
         <Route path='/signin' component={SignIn}/>
+        <Route path='/signup' component={SignUp}/>
         <ProtectedRoute exact path='/admin' component={AdminHome}/>
         <ProtectedRoute path='/admin/list-contacts' component={AdminListContacts}/>
         <ProtectedRoute path='/admin/create-contact' component={AdminCreateContact}/>

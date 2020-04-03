@@ -4,6 +4,7 @@ import APIHandler from './../api/APIHandler'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
+
 const Home = () => {
 
     // liste des contacts
@@ -141,7 +142,8 @@ const Home = () => {
                     {language.websitePresentation? <p className="presentation-par">{language.websitePresentation}</p> :<p className="presentation-par">
 تطبيق انترنت بسيط يقدم خدمة الترجمة عبر الهاتف بين اللغتين العربية والفرنسية للأشخاص الذين يحتاجون إلي هذه الخدمة والمتواجدين داخل فرنسا، خاصة فيما يخص المعاملات الطبية والصحية والتي تتصل بتفشي وباء فيروس كورونا 
                     </p>}
-                    {language.enter? <a href="#app" className="enter-btn-1">{language.enter}</a>: <a href='#app' className="enter-btn-1">أدخل</a>}
+                    {language.enter? <a href="/app" className="enter-btn-1">{language.enter}</a>: <a href='#app' className="enter-btn-1">أدخل</a>}
+                    <Link to="/app">app</Link>
                 </div>
             </div>
 

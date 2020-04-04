@@ -6,9 +6,7 @@ import Nav from './AdminHome'
 
 const AdminCreateContact = (props) => {
 
-   const [contact, setContact] = useState({
-       isWhatsApp: false
-   })
+   const [contact, setContact] = useState({})
 
     const onChange = async e => {
         // console.log(e.target.type, e.target.name, e.target.checked)
@@ -72,7 +70,7 @@ const AdminCreateContact = (props) => {
                     <input type="checkbox" name="from0to4"/>
                     <label htmlFor="from4to8">From 4 to 8</label>
                     <input type="checkbox" name="from4to8"/>
-                    <label htmlFor="from8to12">From 9 to noon</label>
+                    <label htmlFor="from8to12">From 8 to noon</label>
                     <input type="checkbox" name="from8to12"/>
                     <p>p.m.</p>
                     <label htmlFor="from12to16">From noon to 4</label>

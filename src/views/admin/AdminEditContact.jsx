@@ -7,7 +7,9 @@ import Nav from './AdminHome'
 
 const AdminEditContact = (props) => {
 
-   const [contact, setContact] = useState({})
+   const [contact, setContact] = useState({
+        
+   })
 
    useEffect(() => {
     const rv = APIHandler.get(`contact/${props.match.params.id}`)
@@ -17,9 +19,12 @@ const AdminEditContact = (props) => {
     console.log(rv)
    }, [])
 
+   const onClick = async e => {
+       console.log("clicked!")
+   }
 
     const onChange = async e => {
-        // console.log(e.target.type, e.target.name, e.target.checked)
+        console.log(e.target.type, e.target.name, e.target.checked)
         e.target.type === "checkbox"? setContact({...contact, [e.target.name]: e.target.checked}) :
         setContact({...contact, [e.target.name]: e.target.value})
     }
@@ -38,7 +43,7 @@ const AdminEditContact = (props) => {
     return (
         <div>
             <Nav/>
-            <form className='flex-column-center' onChange={onChange} onSubmit={onSubmit} >
+            <form className='flex-column-center' onChange={onChange} onSubmit={onSubmit} onCLick={onClick}>
                 
                 <h3>Main informations (all fields required)</h3>
                 
@@ -52,24 +57,45 @@ const AdminEditContact = (props) => {
                     <label htmlFor="phone">Phone</label>
                     <input type="text" name="phone" defaultValue={contact.phone}/>
                     <label htmlFor="isWhatsApp">Does this phone number work on WhatsApp?</label>
-                    <input type="checkbox" name="isWhatsApp" defaultChecked={contact.isWhatsApp && "check"}/>
+                    {contact.isWhatsApp? <input type="checkbox" name="isWhatsApp" checked/>:
+                    <input type="checkbox" name="isWhatsApp" />}
+                    {/* <input type="radio" name="isWhatsApp" defaultChecked={contact.isWhatsApp && "true"}/> */}
                 </div>
 
                 <h3>What services can he/she propose? (at least one field required)</h3>
                 
                 <div className="flex-column-center">
                     <label htmlFor="isTranslator">Translation in his/her language</label>
-                    <input type="checkbox" name="isTranslator" defaultChecked={contact.isTranslator && "check"}/>
+                    {
+                        contact.isTranslator ? <input type="checkbox" name="isTranslator" checked/>:
+                        <input type="checkbox" name="isTranslator"/>
+                    }
                     <label htmlFor="callAmbulance">Call an ambulance</label>
-                    <input type="checkbox" name="callAmbulance" defaultChecked={contact.callAmbulance && "check"}/>
+                    {
+                        contact.callAmbulance ? <input type="checkbox" name="callAmbulance" checked/>:
+                        <input type="checkbox" name="callAmbulance"/>
+                    }
                     <label htmlFor="psySupport">Psychological support</label>
-                    <input type="checkbox" name="psySupport" defaultChecked={contact.psySupport && "check"}/>
+                    {
+                        contact.psySupport ? <input type="checkbox" name="psySupport" checked/>:
+                        <input type="checkbox" name="psySupport"/>
+                    }
                     <label htmlFor="needsMedecines">If someone needs medecines, would he/she go to buy them?</label>
-                    <input type="checkbox" name="needsMedecines" defaultChecked={contact.needsMedecines && "check"}/>
+                    {
+                        contact.needsMedecines ?<input type="checkbox" name="needsMedecines" checked/>:
+                        <input type="checkbox" name="needsMedecines"/>
+                    }
+                    
                     <label htmlFor="needsSupermarket">Go to the store to buy food and basic commodities</label>
-                    <input type="checkbox" name="needsSupermarket" defaultChecked={contact.needsSupermarket && "check"}/>
+                    {
+                        contact.needsSupermarket ? <input type="checkbox" name="needsSupermarket" checked/> :
+                        <input type="checkbox" name="needsSupermarket" />
+                    }
                     <label htmlFor="needsElse">Anything else that someone would need to ask</label>
-                    <input type="checkbox" name="needsElse" defaultChecked={contact.needsElse && "check"}/>
+                    {
+                        contact.needsElse?<input type="checkbox" name="needsElse" checked/>:
+                        <input type="checkbox" name="needsElse" />
+                    }
                 </div>
 
                 <h3>On what hours?</h3>
@@ -77,18 +103,36 @@ const AdminEditContact = (props) => {
                 <div className="flex-column-center">
                     <p>a.m.</p>
                     <label htmlFor="from0to4">From midnight to 4</label>
-                    <input type="checkbox" name="from0to4" defaultChecked={contact.from0to4 && "check"}/>
+                    {
+                        contact.from0to4 ?<input type="checkbox" name="from0to4" checked/>:
+                        <input type="checkbox" name="from0to4" />
+                    }
                     <label htmlFor="from4to8">From 4 to 8</label>
-                    <input type="checkbox" name="from4to8" defaultChecked={contact.from4to8 && "check"}/>
-                    <label htmlFor="from8to12">From 9 to noon</label>
-                    <input type="checkbox" name="from8to12" defaultChecked={contact.from8to12 && "check"}/>
+                    {
+                        contact.from4to8 ?<input type="checkbox" name="from4to8" checked/>: 
+                        <input type="checkbox" name="from4to8" />
+                    }
+                    <label htmlFor="from8to12">From 8 to noon</label>
+                    {
+                        contact.from8to12? <input type="checkbox" name="from8to12" checked/>:
+                        <input type="checkbox" name="from8to12" />   
+                    }
                     <p>p.m.</p>
                     <label htmlFor="from12to16">From noon to 4</label>
-                    <input type="checkbox" name="from12to16" defaultChecked={contact.from12to16 && "check"}/>
+                    {
+                        contact.from12to16?  <input type="checkbox" name="from12to16" checked/>:
+                        <input type="checkbox" name="from12to16" />
+                    }
                     <label htmlFor="from16to20">From 4 to 8</label>
-                    <input type="checkbox" name="from16to20" defaultChecked={contact.from16to20 && "check"}/>
+                    {
+                        contact.from16to20 ? <input type="checkbox" name="from16to20" checked/> :
+                        <input type="checkbox" name="from16to20"/>
+                    }
                     <label htmlFor="from20to24">From 8 to midnight</label>
-                    <input type="checkbox" name="from20to24" defaultChecked={contact.from20to24 && "check"}/>
+                    {
+                        contact.from20to24 ? <input type="checkbox" name="from20to24" checked/>:
+                        <input type="checkbox" name="from20to24"/>
+                    }
                 </div>
 
                 <button>Edit contact</button>

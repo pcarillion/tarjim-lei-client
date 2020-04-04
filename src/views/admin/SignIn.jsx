@@ -43,7 +43,7 @@ const Signin = (props) => {
             <input className="input border-btn"  type="email" name="email" placeholder="example@domaine.com" required defaultValue="hello@gmail.com" />
 
             <label className="label" htmlFor="password">Votre mot de passe</label>
-            <input className="input border-btn" type="password" name="password" placeholder="••••••••" required defaultValue="azerty"/>
+            <input className="input border-btn" type="password" name="password" placeholder="••••••••" required/>
              
             <p className="error-message">{error}</p>
 

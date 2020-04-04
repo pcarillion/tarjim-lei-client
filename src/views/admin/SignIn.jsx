@@ -40,10 +40,10 @@ const Signin = (props) => {
     return (
         <form className="form-signin flex-column-center" onChange={handleChange} onSubmit={handleSubmit}>
             <label className="label" htmlFor="from">Votre adresse e-mail</label>
-            <input className="input border-btn" id="from" type="email" name="email" placeholder="example@domaine.com" required defaultValue={user.email}/>
+            <input className="input border-btn"  type="email" name="email" placeholder="example@domaine.com" required defaultValue="hello@gmail.com" />
 
             <label className="label" htmlFor="password">Votre mot de passe</label>
-            <input className="input border-btn" id="from" type="password" name="password" placeholder="••••••••" required defaultValue={user.password}/>
+            <input className="input border-btn" type="password" name="password" placeholder="••••••••" required defaultValue="azerty"/>
              
             <p className="error-message">{error}</p>
 

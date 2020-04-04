@@ -29,7 +29,7 @@ function App() {
         <Route path="/app" component={Application}/>
 
         <Route path='/signin' component={SignIn}/>
-        {/* <Route path='/signup' component={SignUp}/> */}
+        <Route path='/signup' component={SignUp}/>
         <ProtectedRoute exact path='/admin' component={AdminHome}/>
         <ProtectedRoute path='/admin/list-contacts' component={AdminListContacts}/>
         <ProtectedRoute path='/admin/create-contact' component={AdminCreateContact}/>

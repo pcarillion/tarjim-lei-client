@@ -33,7 +33,7 @@ const AdminCreateLanguage = (props) => {
             <p>Please translate literaly the terms between quotation marks ("")</p>
             <p>Please, fill ALL the fields to register a new language</p>
             
-            <form className='flex-column-center' onChange={onChange} onSubmit={onSubmit} >
+            <form className='admin-form flex-column-center' onChange={onChange} onSubmit={onSubmit} >
             
             <h3>Home page</h3>
             <label htmlFor="language">Language</label>

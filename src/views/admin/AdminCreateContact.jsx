@@ -28,7 +28,7 @@ const AdminCreateContact = (props) => {
     return (
         <div>
             <Nav/>
-            <form className='flex-column-center' onChange={onChange} onSubmit={onSubmit} >
+            <form className='admin-form flex-column-center' onChange={onChange} onSubmit={onSubmit} >
                 
                 <h3>Main informations (all fields required)</h3>
                 

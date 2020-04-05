@@ -43,7 +43,7 @@ const AdminEditContact = (props) => {
     return (
         <div>
             <Nav/>
-            <form className='flex-column-center' onChange={onChange} onSubmit={onSubmit} onCLick={onClick}>
+            <form className='admin-form flex-column-center' onChange={onChange} onSubmit={onSubmit} onCLick={onClick}>
                 
                 <h3>Main informations (all fields required)</h3>
                 

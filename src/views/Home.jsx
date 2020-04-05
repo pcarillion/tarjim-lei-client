@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 import APIHandler from './../api/APIHandler'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const Home = () => {
@@ -20,7 +22,7 @@ const Home = () => {
 
     function checkIfTrue(bool){
         if (bool === true) {
-            return <FontAwesomeIcon icon={faWhatsapp}/>
+            return <FontAwesomeIcon className="FontIcon" icon={faWhatsapp}/>
           }
     }
 
@@ -47,6 +49,7 @@ const Home = () => {
     }
 
     const [results, setResults] = useState([])
+    
     useEffect(() => {
         setResults(allContacts.filter((contact) => {
             return (
@@ -76,6 +79,12 @@ const Home = () => {
         supermarket,
         other
     ]))
+
+    function changeNumToWhats(number) {
+        var result
+        result = number.replace(")", "").replace("(", "").split(" ").join("")
+        return result
+      }
 
 
     // langue
@@ -120,6 +129,7 @@ const Home = () => {
 
 
 
+
     return (
         <div className="app-div">
 
@@ -128,12 +138,13 @@ const Home = () => {
                 <form action="">
                     <select onChange={handleChange}>
                         {allLanguages.map((language, i) => {
-                            return language.language === "عربي"? 
+                            return language.language.trim() === "عربي"? 
                             <option value={language._id} selected>{language.language}</option>:
                             <option value={language._id}>{language.language}</option>
                             
                         })}
                     </select>
+                    
                 </form>
                 
                 </nav>
@@ -239,8 +250,8 @@ const Home = () => {
                     <tbody>
                         {results.map((contact, i) => (
                             <tr>
-                                <td><a href={`https://wa.me/${contact.phone}`}>{checkIfTrue(contact.isWhatsApp)}</a></td>
-                                <td><a href={`tel:${contact.phone}`}>{contact.phone}</a></td>
+                                <td><a href={`https://wa.me/${changeNumToWhats(contact.phone)}`}>{checkIfTrue(contact.isWhatsApp)}</a></td>
+                                <td><a href={`tel:${contact.phone}`}><FontAwesomeIcon className="FontIcon" icon={faPhone}/></a></td>
                                 <td>{contact.language}</td>
                                 <td>{contact.city}</td>
                                 <td>{contact.name}</td>
@@ -265,8 +276,8 @@ const Home = () => {
                                 <td>{contact.name}</td>
                                 <td>{contact.city}</td>
                                 <td>{contact.language}</td>
-                                <td><a href={`tel:${contact.phone}`}>{contact.phone}</a></td>
-                                <td>{checkIfTrue(contact.isWhatsApp)}</td>
+                                <td><a href={`tel:${contact.phone}`}><FontAwesomeIcon className="FontIcon" icon={faPhone}/></a></td>
+                                <td><a href={`https://wa.me/${changeNumToWhats(contact.phone)}`}>{checkIfTrue(contact.isWhatsApp)}</a></td>
                             </tr>
                         ))}
                     </tbody>

@@ -61,6 +61,10 @@ textarea {
   margin: 15px;
 }
 
+.admin-form input {
+  text-align: center;
+}
+
 /* quelques éléments des pages d'admin sont stylisés dans la partie ci dessous, notamment la partie "table"  */
 
 /* Main page */
@@ -211,6 +215,10 @@ th, td {
 
 table a {
   text-decoration: underline;
+}
+
+.FontIcon {
+  margin-top: 3.5%;
 }
 
 .contact-div {

@@ -285,8 +285,11 @@ const Home = () => {
                 <div className="flex-column-center contact-div">
                         <p>Rejoignez-nous / انضم إلينا</p>
                         <p>covid19-tarjama@gmail.com</p>
-                        <img className="logo" src="./../../bonabroad.png"/>
-                        <img className="logo" src="./../../ensemblepourlechangement.png"/>
+                        <div>
+                            <img className="logo" src="./../../bonabroad.png"/>
+                            <img className="logo" src="./../../ensemblepourlechangement.png"/>
+                        </div>
+                        
 
                     </div>
             </div>

@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Markazi+Text&display=swap');
 
+/* 
+colors:
+
+chart 1:
+pink: #D151AB
+violet: #7133C3
+blanc cassé: #FDFCFF
+
+
+*/
+
 * {
   margin : 0;
   font-family: 'Markazi Text', 'Roboto', 'Lato';
@@ -78,12 +89,12 @@ textarea {
 .home-div {
   min-height: 100vh;
   width: 90%;
-  background-color: beige;
+  background-color: #FDFCFF;
   padding: 0 5% 5% 5%;
 }
 
 .home-div * {
-  color: brown;
+  color: #7133C3;
 }
 
 .home-content {
@@ -93,15 +104,15 @@ textarea {
 .presentation-par {
   width: fill;
   padding: 5%;
-  color: beige;
-  background-color: brown;
+  color: #FDFCFF;
+  background-image: linear-gradient(155deg,#7133C3 60%, #D151AB);
   border-radius: 15px;
 }
 
 .enter-btn-1 {
   border-radius: 15px;
-  background-color: brown;
-  color:beige;
+  background-image: linear-gradient(155deg,#7133C3 60%, #D151AB);
+  color:#FDFCFF;
   padding: 10px 20px;
 }
 
@@ -110,11 +121,11 @@ textarea {
 .form-div {
   min-height: 100vh;
   width: 100%;
-  background-color: brown;
+  background-image: linear-gradient(155deg,#7133C3 60%, #D151AB);
 }
 
 .form-div * {
-  color: beige;
+  color: #FDFCFF;
 }
 
 .form-div > form {
@@ -128,13 +139,13 @@ textarea {
   width: 94%;
   max-width: 800px;
   margin: 3%;
-  background-color: beige;
+  background-color: #FDFCFF;
   height: fit-content;
   border-radius: 15px; 
 }
 
 .form-component * {
-  color: brown;
+  color: #7133C3 ;
 }
 
 
@@ -162,9 +173,7 @@ textarea {
   justify-content: space-between;
 }
 
-.input-div input:checked {
-  background-color: brown;
-}
+
 
 .input-div > p {
   text-align: right;
@@ -173,8 +182,8 @@ textarea {
 
 .enter-btn-2 {
   border-radius: 15px;
-  background-color: beige;
-  color:brown;
+  background-color: #FDFCFF;
+  color: #7133C3;
   padding: 10px 20px;
   margin: 20px;
 }
@@ -190,12 +199,12 @@ textarea {
 #list-div {
   min-height: 50vh;
   /* height: 100vh; */
-  background-color: beige;
+  background-color:  #FDFCFF;
   padding: 10% 0;
 }
 
 #list-div * {
-  color: brown
+  color: #7133C3
 }
 
 table {
@@ -209,7 +218,7 @@ table > * {
 }
 
 th, td {
-  border: 0.5px solid brown;
+  border: 0.5px solid #7133C3;
   max-width: 17%;
 }
 
@@ -227,5 +236,6 @@ table a {
 }
 
 .logo {
+  margin-top: 20px;
   height: 100px;
 }

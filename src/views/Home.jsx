@@ -7,7 +7,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Home = () => {
+const Home = (props) => {
 
     // liste des contacts
 
@@ -109,9 +109,12 @@ const Home = () => {
 
     const defaultLanguage = async (data) => {
         console.log(data)
+        if (props.match.params.id) {
+            return setLanguageId(props.match.params.id)
+        }
         if (languageId.length == 0) {
             for (let i = 0; i < data.length; i++) {
-                if (data[i].language === "عربي") {
+                if (data[i].language.trim() === "عربي") {
                     setLanguageId(data[i]._id)
                 }
             }
@@ -137,10 +140,10 @@ const Home = () => {
                 <nav>
                 <form action="">
                     <select onChange={handleChange}>
-                        {allLanguages.map((language, i) => {
-                            return language.language.trim() === "عربي"? 
-                            <option value={language._id} selected>{language.language}</option>:
-                            <option value={language._id}>{language.language}</option>
+                        {allLanguages.map((lang, i) => {
+                            return lang.language === language.language ? 
+                            <option value={lang._id} selected>{lang.language}</option>:
+                            <option value={lang._id}>{lang.language}</option>
                             
                         })}
                     </select>
@@ -150,8 +153,19 @@ const Home = () => {
                 </nav>
                 <div className="flex-column-center home-content">
                     {language.websiteName? <h1>{language.websiteName}</h1>:<h1>ترجمة نزبطا ليك</h1>}
-                    {language.websitePresentation? <p className="presentation-par">{language.websitePresentation}</p> :<p className="presentation-par">
-تطبيق انترنت بسيط يقدم خدمة الترجمة عبر الهاتف بين اللغتين العربية والفرنسية للأشخاص الذين يحتاجون إلي هذه الخدمة والمتواجدين داخل فرنسا، خاصة فيما يخص المعاملات الطبية والصحية والتي تتصل بتفشي وباء فيروس كورونا 
+                    {language.websitePresentation? 
+                    <p className="presentation-par">
+                        {language.websitePresentation}<br/>
+                        {language.seeMore?
+                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
+                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>} 
+                    </p>
+                    :<p className="presentation-par">
+                        Here is an application but the data base seems to encounter difficulties.
+                        <br/>
+                        {language.seeMore?
+                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
+                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>}
                     </p>}
                     {language.enter? <a href="#form-div" className="enter-btn-1">{language.enter}</a>: <a href='#form-div' className="enter-btn-1">أدخل</a>}
                     {/* <Link to="/signin">Log in</Link> */}

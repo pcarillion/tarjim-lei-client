@@ -11,10 +11,12 @@ const AdminCreateLanguage = (props) => {
     const [language, setLanguage] = useState({})
  
      const onChange = async e => {
+         console.log(e.target.value)
          setLanguage({...language, [e.target.name]: e.target.value})
      }
  
      const onSubmit = async e => {
+         console.log(language)
          e.preventDefault()
          try {
              await APIHandler.post('/inner-text/create', language);
@@ -97,6 +99,15 @@ const AdminCreateLanguage = (props) => {
             <input type="text" name="transLanguage"/>
             <label htmlFor="whatsapp">"Whatsapp"</label>
             <input type="text" name="whatsapp"/>
+
+            <label htmlFor="genCond1">General Conditions, first Paragraph</label>
+            <textarea name="genCond1"/>
+            <label htmlFor="">General Conditions, second Paragraph</label>
+            <textarea name="genCond2"/>
+            <label htmlFor="back">"Back"</label>
+            <input type="text" name="back"/>
+            <label htmlFor="seeMore">"Read more" (link to general conditions)</label>
+            <input type="text" name="seeMore"/>
 
             <button>Add</button>
             </form>

@@ -6,7 +6,7 @@ import { ProtectedRoute } from "./auth/ProtectedRoute";
 
 
 import Home from './views/Home'
-import Application from './views/Application'
+import GenConditions from './views/GenConditions'
 
 import SignIn from './views/admin/SignIn'
 import SignUp from './views/admin/SignUp'
@@ -26,7 +26,9 @@ function App() {
     <React.Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/app" component={Application}/>
+        
+        <Route path="/general-conditions/:id" component={GenConditions}/>
+        <Route exact path="/home/:id" component={Home} />
 
         <Route path='/signin' component={SignIn}/>
         {/* <Route path='/signup' component={SignUp}/> */}

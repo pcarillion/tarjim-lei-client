@@ -19,6 +19,7 @@ useEffect(() => {
 }, [])
 
 const onChange = async e => {
+        // console.log(language)
         // console.log(e.target.type, e.target.name, e.target.checked)
         setLanguage({...language, [e.target.name]: e.target.value})
     }
@@ -109,6 +110,15 @@ const onChange = async e => {
             <input type="text" name="phone" defaultValue={language.phone}/>
             <label htmlFor="whatsapp">"Whatsapp available"</label>
             <input type="text" name="whatsapp" defaultValue={language.whatsapp}/>
+
+            <label htmlFor="genCond1">General Conditions, first Paragraph</label>
+            <textarea name="genCond1" defaultValue={language.genCond1}/>
+            <label htmlFor="">General Conditions, second Paragraph</label>
+            <textarea name="genCond2" defaultValue={language.genCond2}/>
+            <label htmlFor="back">"Back"</label>
+            <input type="text" name="back" defaultValue={language.back}/>
+            <label htmlFor="seeMore">"Read more" (link to general conditions)</label>
+            <input type="text" name="seeMore" defaultValue={language.seeMore}/>
 
             <button>Edit</button>
             </form>

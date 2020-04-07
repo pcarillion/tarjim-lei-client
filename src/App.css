@@ -110,6 +110,10 @@ textarea {
   border-radius: 15px;
 }
 
+.gen-cond-link {
+   color: #FDFCFF
+}
+
 .enter-btn-1 {
   border-radius: 15px;
   background-image: linear-gradient(155deg,#7133C3 60%, #D151AB);
@@ -243,4 +247,33 @@ table a {
 .logo {
   margin-top: 20px;
   height: 100px;
+}
+
+/* general conditions */
+
+.gen-cond-div {
+  padding: 10%;
+  background-color: #FDFCFF;
+}
+
+.border-div {
+  padding: 2px;
+  background-image: linear-gradient(155deg,#7133C3 70%, #D151AB);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.gen-cond-par1 {
+  background-color: #FDFCFF;
+  border-radius: 15px 15px 0 0;
+  padding: 5%;
+  color: #7133C3;
+}
+
+
+.gen-cond-par2 {
+  background-color: #FDFCFF;
+  border-radius: 0 0 15px 15px;
+  padding: 5%;
+  color: #7133C3;
 }

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import APIHandler from './../api/APIHandler'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -154,12 +154,12 @@ const Home = (props) => {
                 <div className="flex-column-center home-content">
                     {language.websiteName? <h1>{language.websiteName}</h1>:<h1>ترجمة نزبطا ليك</h1>}
                     {language.websitePresentation? 
-                    <p className="presentation-par">
+                        <p className="presentation-par"> 
                         {language.websitePresentation}<br/>
                         {language.seeMore?
                         <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
                         <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>} 
-                    </p>
+                        </p>
                     :<p className="presentation-par">
                         Here is an application but the data base seems to encounter difficulties.
                         <br/>
@@ -298,7 +298,8 @@ const Home = (props) => {
                 </table>}
                 <div className="flex-column-center contact-div">
                         <p>Rejoignez-nous / انضم إلينا</p>
-                        <p>covid19-tarjama@gmail.com</p>
+                        <p>exiled.confined@gmail.com</p>
+                        <a href="https://www.facebook.com/Exil%C3%A9Es-Confin%C3%A9Es-101584331519914" target="_blank"><FontAwesomeIcon icon={faFacebook} style={{fontSize:"30px", color:"#3b5998"}}/></a>
                         <div>
                             <img className="logo" src="./../../bonabroad.png"/>
                             <img className="logo" src="./../../ensemblepourlechangement.png"/>

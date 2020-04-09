@@ -56,7 +56,7 @@ const onChange = async e => {
             <label htmlFor="enter">Button "enter"</label>
             <input type="text" name="enter" defaultValue={language.enter}/>
             <label htmlFor="websitePresentation">Website Presentation and general conditions</label>
-            <textarea name="websitePresentation" defaultValue={language.websitePresentation}/>
+            <textarea className="textarea" name="websitePresentation" defaultValue={language.websitePresentation}/>
 
             <h3>Time schedule</h3>
 
@@ -112,9 +112,9 @@ const onChange = async e => {
             <input type="text" name="whatsapp" defaultValue={language.whatsapp}/>
 
             <label htmlFor="genCond1">General Conditions, first Paragraph</label>
-            <textarea name="genCond1" defaultValue={language.genCond1}/>
+            <textarea className="textarea" name="genCond1" defaultValue={language.genCond1}/>
             <label htmlFor="">General Conditions, second Paragraph</label>
-            <textarea name="genCond2" defaultValue={language.genCond2}/>
+            <textarea className="textarea" name="genCond2" defaultValue={language.genCond2}/>
             <label htmlFor="back">"Back"</label>
             <input type="text" name="back" defaultValue={language.back}/>
             <label htmlFor="seeMore">"Read more" (link to general conditions)</label>

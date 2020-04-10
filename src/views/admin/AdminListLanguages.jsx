@@ -35,7 +35,7 @@ const AdminListLanguages = () => {
             <p>Here is the list of the languages, click on it to edit</p>
             <ul>
                 {allLanguages.map((language, i) => (
-                    <li><Link to={`/admin/edit-language/${language._id}`}>{language.language} </Link><button onClick={() => deleteLanguage(language._id)} className="delete-button">Delete</button></li>
+                    <li className="li-language"><Link to={`/admin/edit-language/${language._id}`}>{language.language} </Link><button onClick={() => deleteLanguage(language._id)} className="delete-button">Delete</button></li>
                 ))}
             </ul>
         </div>

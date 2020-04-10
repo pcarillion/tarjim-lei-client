@@ -153,23 +153,23 @@ const Home = (props) => {
                 </nav>
                 <div className="flex-column-center home-content">
                     {language.websiteName? <h1>{language.websiteName}</h1>:<h1>ترجمة نزبطا ليك</h1>}
-                    {language.websitePresentation? 
-                        <p className="presentation-par"> 
-                        {language.websitePresentation}<br/>
-                        {language.seeMore?
-                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
-                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>} 
-                        </p>
-                    :<p className="presentation-par">
-                        Here is an application but the data base seems to encounter difficulties.
-                        <br/>
-                        {language.seeMore?
-                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
-                        <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>}
-                    </p>}
-                    {language.enter? <a href="#form-div" className="enter-btn-1">{language.enter}</a>: <a href='#form-div' className="enter-btn-1">أدخل</a>}
-                    {/* <Link to="/signin">Log in</Link> */}
-                    {/* <Link to='/signup'>Sign up</Link> */}
+                        <div className="presentation-div">
+                            {language.websitePresentation? 
+                            <p className="presentation-par"> 
+                                {language.websitePresentation}
+                            </p>
+                            :<p className="presentation-par">
+                                Here is an application but the data base seems to encounter difficulties.
+                            </p>}
+                            <br/>
+                            {language.seeMore?
+                            <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>{language.seeMore}</Link>:
+                            <Link className="gen-cond-link" to={`/general-conditions/${language._id}`}>Read more about our general conditions</Link>}        
+                        </div>
+                        {language.enter? <a href="#form-div" className="enter-btn-1">{language.enter}</a>: <a href='#form-div' className="enter-btn-1">أدخل</a>}
+                            {/* <Link to="/signin">Log in</Link> */}
+                            {/* <Link to='/signup'>Sign up</Link> */}
+                    
                 </div>
             </div>
 

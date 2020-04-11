@@ -43,7 +43,7 @@ const Signin = (props) => {
             <input className="input border-btn"  type="email" name="email" required  />
 
             <label className="label" htmlFor="password">Votre mot de passe</label>
-            <input className="input border-btn" type="password name="password" required/>
+            <input className="input border-btn" type="password" name="password" required/>
              
             <p className="error-message">{error}</p>
 

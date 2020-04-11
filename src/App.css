@@ -110,6 +110,16 @@ textarea {
   margin-left: 20px;
 }
 
+.language-option {
+  background-color: #7133C3;
+}
+
+.text-option {
+  color: white;
+
+}
+
+
 .home-nav {
   display: flex;
   justify-content: flex-start;

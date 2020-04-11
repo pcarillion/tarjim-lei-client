@@ -139,11 +139,11 @@ const Home = (props) => {
             <div className="home-div">
                 <nav className="home-nav">
                     <form action="" className="language-selection">
-                        <select onChange={handleChange}>
+                        <select style={{color: "white"}} className="language-option"  onChange={handleChange}>
                             {allLanguages.map((lang, i) => {
                                 return lang.language === language.language ? 
-                                <option value={lang._id} selected>{lang.language}</option>:
-                                <option value={lang._id}>{lang.language}</option> 
+                                <option style={{color: "white"}} className="text-option" value={lang._id} selected>{lang.language}</option>:
+                                <option style={{color: "white"}} className="text-option" value={lang._id}>{lang.language}</option> 
                             })}
                         </select>
                     </form>

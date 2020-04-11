@@ -11,8 +11,8 @@ import APIHandler from "../../api/APIHandler";
 const Signin = (props) => {
 
     const [user, setUser] = useState({
-      email: "hello@gmail.com",
-      password: "azertyui"
+      email: "",
+      password: ""
     });
     const userContext = useContext(UserContext);
     const { setCurrentUser } = userContext;
@@ -40,10 +40,10 @@ const Signin = (props) => {
     return (
         <form className="form-signin flex-column-center" onChange={handleChange} onSubmit={handleSubmit}>
             <label className="label" htmlFor="from">Votre adresse e-mail</label>
-            <input className="input border-btn"  type="email" name="email" placeholder="example@domaine.com" required defaultValue="hello@gmail.com" />
+            <input className="input border-btn"  type="email" name="email" required  />
 
             <label className="label" htmlFor="password">Votre mot de passe</label>
-            <input className="input border-btn" type="password" name="password" required/>
+            <input className="input border-btn" type="password name="password" required/>
              
             <p className="error-message">{error}</p>
 

@@ -147,9 +147,10 @@ const Home = (props) => {
                             })}
                         </select>
                     </form>
-                    <img className="website-logo" src="./../../Final Go.png"/>
                 </nav>
                 <div className="flex-column-center home-content">
+                <img className="website-logo" src="./../../Final Go.png"/>
+
                     {language.websiteName? <h1>{language.websiteName}</h1>:<h1>ترجمة نزبطا ليك</h1>}
                         <div className="presentation-div">
                             {language.websitePresentation? 

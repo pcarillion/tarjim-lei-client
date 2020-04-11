@@ -137,19 +137,17 @@ const Home = (props) => {
         <div className="app-div">
 
             <div className="home-div">
-                <nav>
-                <form action="">
-                    <select onChange={handleChange}>
-                        {allLanguages.map((lang, i) => {
-                            return lang.language === language.language ? 
-                            <option value={lang._id} selected>{lang.language}</option>:
-                            <option value={lang._id}>{lang.language}</option>
-                            
-                        })}
-                    </select>
-                    
-                </form>
-                
+                <nav className="home-nav">
+                    <form action="" className="language-selection">
+                        <select onChange={handleChange}>
+                            {allLanguages.map((lang, i) => {
+                                return lang.language === language.language ? 
+                                <option value={lang._id} selected>{lang.language}</option>:
+                                <option value={lang._id}>{lang.language}</option> 
+                            })}
+                        </select>
+                    </form>
+                    <img className="website-logo" src="./../../Final Go.png"/>
                 </nav>
                 <div className="flex-column-center home-content">
                     {language.websiteName? <h1>{language.websiteName}</h1>:<h1>ترجمة نزبطا ليك</h1>}
